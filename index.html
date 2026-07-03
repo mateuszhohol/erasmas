@@ -12,6 +12,10 @@ html{scroll-behavior:smooth}
 body{margin:0;background:#fdfcfa}
 a.navlink:hover{color:#003399}
 a.langlink:hover{background:#efece5}
+/* desktop only: crop the hero image lower so more EU-flag stars are visible */
+@media (min-width:881px){
+  img[src*="abacus"]{object-position:center 90% !important;}
+}
 /* responsive – tablets: collapse the 240px label column */
 @media (max-width:880px){
   div[style*="grid-template-columns:240px 1fr"]{grid-template-columns:1fr !important;}
