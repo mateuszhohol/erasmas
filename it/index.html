@@ -12,6 +12,20 @@ html{scroll-behavior:smooth}
 body{margin:0;background:#fdfcfa}
 a.navlink:hover{color:#003399}
 a.langlink:hover{background:#efece5}
+/* responsive – tablets: collapse the 240px label column */
+@media (max-width:880px){
+  div[style*="grid-template-columns:240px 1fr"]{grid-template-columns:1fr !important;}
+  h1{font-size:clamp(32px, 6vw, 44px) !important;}
+}
+/* responsive – phones: single-column lists, tighter padding */
+@media (max-width:640px){
+  header{padding-left:20px !important; padding-right:20px !important;}
+  div[id], footer{padding-left:22px !important; padding-right:22px !important;}
+  div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important;}
+  h1{font-size:clamp(28px, 8.5vw, 36px) !important;}
+  #top{padding-top:52px !important; padding-bottom:52px !important;}
+  footer > div, footer > div > div{flex-wrap:wrap !important; justify-content:center !important;}
+}
 </style>
 </head>
 <body>
